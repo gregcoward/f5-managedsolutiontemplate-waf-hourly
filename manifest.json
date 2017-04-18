@@ -1,0 +1,25 @@
+{
+ "isEnabled": true, // leave as is
+ "templateFileUri": "", // leave as is
+ "tenantId": "df6d4fe8-47c2-473e-93db-f663a14a859f", // this is Azure AD tenant ID ("azure account show" will list it)
+ "authorizations": [ // at least one but could be more than one to get desired permissions
+  {
+    "principalId": "518d398a-22a7-4504-af37-530384c5e20d", // Azure AD group ID to grant permission to
+    "roleDefinitionId": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635" // Role definition GUID with desired permissions
+  },
+  {
+ "principalId": "aa46bb75-a5a0-4d53-8a05-ddc829f1ea1b", // Azure AD group ID to grant permission to
+ "roleDefinitionId": "749f88d5-cbae-40b8-bcfc-e573ddc772fa" // Role definition GUID with desired permissions
+ }
+ ],
+ "plan": {
+ "name": "F5 Managed WAF Appliance", //short descriptive name of the appliance
+ "publisher": "f5-networks", // publisher - match what you have in the Publisher portal
+ "product": "waf-appliance", // product name/sku
+ "version": "12.1.22" // version
+ },
+ "uiDefinition": {
+ "createUiDefinitionUri": "", // leave as is
+ "lifecycleUiDefinitionUri": "" // leave as is
+ }
+}
